@@ -1,6 +1,6 @@
 import { GlobalStyles } from 'utils/GlobalStyles';
 import { Section } from './Section/Section';
-import { ContactForm } from './ContactForm/ContactForm';
+/* import { ContactForm } from './ContactForm/ContactForm'; */
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { StyledToastContainer } from './ContactForm/ContactForm.styled';
@@ -10,7 +10,7 @@ export const App = () => {
     <div>
       <Section>
         <h1>Phonebook</h1>
-        <ContactForm />
+        {/* <ContactForm /> */}
       </Section>
 
       <Section>

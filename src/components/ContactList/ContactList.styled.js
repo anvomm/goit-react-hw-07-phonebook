@@ -4,13 +4,14 @@ export const List = styled.ul`
   width: 250px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
   gap: 20px;
   margin-top: 30px;
 
   @media (min-width: 480px) {
-    width: 350px;
+    width: 100%;
   }
 `;
 
@@ -18,6 +19,7 @@ export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   line-height: 1.6;
   color: #4b494d;
 `;
