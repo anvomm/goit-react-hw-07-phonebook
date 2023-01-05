@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contacts/contactsSlice';
+import { addContact } from 'redux/operations';
 import { getContacts } from 'redux/contacts/contacts-selectors';
-import { nanoid } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Wrap, Label, Input, Button } from './ContactForm.styled';
@@ -58,7 +57,7 @@ export const ContactForm = () => {
       resetForm();
       return;
     }
-    dispatch(addContact({ name, number, id: nanoid() }));
+    dispatch(addContact({ name, number }));
     resetForm();
   };
 
