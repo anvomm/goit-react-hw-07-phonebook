@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
-import { getContacts } from 'redux/contacts/contacts-selectors';
+import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Wrap, Label, Input, Button } from './ContactForm.styled';
@@ -11,7 +11,7 @@ export const ContactForm = () => {
   const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   const resetForm = () => {
     setName('');
@@ -52,7 +52,6 @@ export const ContactForm = () => {
     );
 
     if (isExist) {
-      /* alert(`${name} is already in contacts.`); */
       notificateIsExist(name);
       resetForm();
       return;
